@@ -1,0 +1,41 @@
+<main>
+    <section class="agendamento">
+        <h2 class="titulo-principal">Agende o seu atendimento</h2>
+        <form id="agendamento" action="">
+            <label for="voucher">Voucher de compra</label>
+            <input type="text" class="input-padrao" name="voucher">
+            <label for="dia-agendamento">Dia do Agendamento</label>
+            <input type="date" id="date" name="diaAgendamento">
+            <fieldset>
+                <legend>Unidade</legend>
+                <select name="unidade" for="unidade">
+                    <option value=""></option>
+                    <option value="Barra">Barra</option>
+                    <option value="Imbuí">Imbuí</option>
+                    <option value="Lauro de Freitas">Lauro de Freitas</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Horário</legend>
+                <select name="horaAgendamento"  form="agendamento">
+                    <option value=""></option>
+                    <option value="horario-9-am">09:00</option>
+                    <option value="horario-10-am">10:00</option>
+                    <option value="horario-11-am">11:00</option>
+                    <option value="horario-13-am">13:00</option>
+                    <option value="horario-14-am">14:00</option>
+                    <option value="horario-15-am">15:00</option>
+                    <option value="horario-16-am">16:00</option>
+                    <option value="horario-17-am">17:00</option>
+                </select>
+            </fieldset>
+            <label for="nome-da-pessoa">Agendamento em nome de:</label>
+            <input class="input-padrao" type="text" name="nomeDaPessoa" placeholder="Nome da Pessoa">
+            <label for="observaçoes">Observações</label>
+            <textarea name="observacoes" cols="30" rows="10"></textarea>
+            <ul id="mensagens-erro">
+            </ul>
+            <input type="submit" value="Agendar" class="btn-enviar">               
+        </form>
+    </section>
+</main>

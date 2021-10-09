@@ -1,0 +1,40 @@
+ <section class="mt-5  py-5 container-fluid login">
+   <div class="  my-3 py-3 text-center">
+     <img class="avatar" src="../../assets/img/avatar.svg" alt="">
+     <h2 class="justify-content-center">Bem-vindo</h2>
+   </div>
+   <form *ngIf="loginForm" [formGroup]="loginForm">
+     <div class="row justify-content-center">
+       <div class="mb-3 col-md-4 col-md-6 col-lg-3">
+         <label for="email" class="form-label">Email</label>
+         <input type="email" formControlName="email" class="form-control" placeHolder="seu_email@email.com" id="email" aria-describedby="email">
+         <ng-container *ngIf="loginForm.controls.email.touched">
+          <span *ngIf="loginForm.controls.email.errors">E-mail deve ser no formato "seu_email@email.com"</span>
+        </ng-container>
+       </div>
+     </div>
+     <div class="row justify-content-center">
+       <div class="mb-3 col-md-4 col-md-6 col-lg-3">
+         <label for="senha" class="form-label">Senha</label>
+         <input type="password" formControlName="senha" placeHolder="Digite sua senha" class="form-control" id="senha">
+         <ng-container *ngIf="loginForm.controls.senha.touched">
+          <span *ngIf="loginForm.controls.senha.errors">Senha deve ter no minimo 8 caracteres, com pelo menos um numero e uma letra</span>
+        </ng-container>
+       </div>
+     </div>
+     <div class="row justify-content-center">
+       <div class=" mt-3 col-md-4 text-center">
+         <Button type="submit" (click)="login()" class="btn btn-outline-dark">Entrar</Button>
+         <a class="btn btn-outline-dark ms-3" routerLink="/cadastro-barber">Ir para Cadastro</a>
+         <ul class="mt-3 list-unstyled">
+           <li class="p-1">
+             <a class="text-decoration-none " href="recuperar.html">Esqueci a senha</a>
+           </li>
+           <li class="p-1">
+             <a class="text-decoration-none "  routerLink="/cadastro-barber">Cadastrar estabelecimento</a>
+           </li>
+         </ul>
+       </div>
+     </div>
+   </form>
+ </section>
